@@ -2760,6 +2760,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1129640076844358485, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
   m_PrefabInstance: {fileID: 278105556771887665}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &278105556771887667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2784376733881793293, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
+  m_PrefabInstance: {fileID: 278105556771887665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Toggle
 --- !u!1001 &3006083157901107367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2808,6 +2819,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6254019096674875639, guid: ae36bfdd798ed554ab03624e325fec19, type: 3}
+      propertyPath: toggle
+      value: 
+      objectReference: {fileID: 278105556771887667}
     - target: {fileID: 6451807665600120949, guid: ae36bfdd798ed554ab03624e325fec19, type: 3}
       propertyPath: m_Name
       value: UIManager
