@@ -24,7 +24,6 @@ public class UIManager : MonoBehaviour
 
     public void isCheck(bool isOn)
     {
-        Debug.Log("IsCheck : " + isOn);
         hideController = isOn;
         PlayerPrefs.SetInt("hideController", isOn ? 1 : 0);
         mobileController.SetActive(!isOn);

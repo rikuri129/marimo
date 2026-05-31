@@ -618,9 +618,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 700785773}
-        m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
-        m_MethodName: PushSetting
+      - m_Target: {fileID: 1447618207}
+        m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
+        m_MethodName: pushSetting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5916634713817714386, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
   m_PrefabInstance: {fileID: 278105556771887665}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 278105556771887666}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94f9ba507e50e6441b7771aa26b7e76e, type: 3}
@@ -1971,6 +1971,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424086012}
   m_CullTransparentMesh: 1
+--- !u!1 &1447618206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447618208}
+  - component: {fileID: 1447618207}
+  m_Layer: 0
+  m_Name: settingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1447618207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447618206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c348cb9ee43f0c4593f18cbbfb50a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingManager
+  settingPanel: {fileID: 278105556771887666}
+--- !u!4 &1447618208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447618206}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.17837, y: -10.10493, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541067037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,7 +2296,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5188173852858522736, guid: 215a96dd2bfe2f34b8ad986ed1c22106, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2479,7 +2524,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5426992086352664609, guid: 2d192a31a0ef89249a8c4b058a77d51e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2570,7 +2615,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3834196484942233955, guid: bb6081f71a7472e4598c99493cef13a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2608,7 +2653,15 @@ PrefabInstance:
     - target: {fileID: 1111545618046547539, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 700785773}
+      objectReference: {fileID: 1447618207}
+    - target: {fileID: 1111545618046547539, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: pushClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111545618046547539, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1129640076844358485, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
       propertyPath: m_Name
       value: settingPanel
@@ -2702,6 +2755,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
+--- !u!1 &278105556771887666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1129640076844358485, guid: 5bde939a81f5cc04a97b67f3783a3ee3, type: 3}
+  m_PrefabInstance: {fileID: 278105556771887665}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3006083157901107367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2922,7 +2980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166224118170987136, guid: dce48c4ec2adbff4eb6e184124d7c5dd, type: 3}
       propertyPath: FirstFadeInComp
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3005,11 +3063,12 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 2105838382}
+  - {fileID: 2138600117}
+  - {fileID: 1855550408}
   - {fileID: 445634856}
   - {fileID: 1541067040}
   - {fileID: 3512961904877232480}
   - {fileID: 4864364144133187904}
-  - {fileID: 2138600117}
-  - {fileID: 1855550408}
   - {fileID: 1050807726}
   - {fileID: 3006083157901107367}
+  - {fileID: 1447618208}
