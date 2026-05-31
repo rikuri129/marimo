@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6005975504587909230}
   - component: {fileID: 7326514129585274587}
   - component: {fileID: 1774016340339913363}
-  - component: {fileID: 5916634713817714386}
   m_Layer: 5
   m_Name: settingPanel
   m_TagString: Untagged
@@ -78,18 +77,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5916634713817714386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129640076844358485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94f9ba507e50e6441b7771aa26b7e76e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SettingDirector
 --- !u!1 &4357999681296072948
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,9 +274,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2524916406991886164, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-        m_TargetAssemblyTypeName: GameDirector, Assembly-CSharp
-        m_MethodName: PushClose
+      - m_Target: {fileID: 3407383922021936588, guid: e0d19b088ec8abf4993ef6d6a46d4942, type: 3}
+        m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
+        m_MethodName: pushClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -365,7 +352,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 602cc9bead0626b478c75533bc64bf00, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
