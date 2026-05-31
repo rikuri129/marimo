@@ -18,6 +18,7 @@ public class SelectStageDirector : MonoBehaviour
         {
             print("ÉGÉâÅ[Ç≈Ç∑ÅB");
         }
+        Debug.Log(Fade.IsFadeOutComplete());
     }
 
     // Update is called once per frame
@@ -44,7 +45,7 @@ public class SelectStageDirector : MonoBehaviour
         {
             isLoading = true;
             Debug.Log("Fade Complete");
-            Debug.Log("Load : Stage" + selectedStageNum);
+            Debug.Log(gameObject.name + " Load : Stage" + selectedStageNum);
             SceneManager.LoadScene("Stage" + selectedStageNum);
         }
         

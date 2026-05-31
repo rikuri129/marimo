@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 36032698}
   - component: {fileID: 36032699}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Trigger3
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1864,7 +1864,7 @@ GameObject:
   - component: {fileID: 1124738728}
   - component: {fileID: 1124738729}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Trigger1
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2980,7 +2980,7 @@ GameObject:
   - component: {fileID: 1893556535}
   - component: {fileID: 1893556536}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Trigger2
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
