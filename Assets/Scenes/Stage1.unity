@@ -128518,17 +128518,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3024881814064214888, guid: b96e3c1c36bc8a74eb147d95f9dfdc11, type: 3}
   m_PrefabInstance: {fileID: 1395142195}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &706914746 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5009100772092756537, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
-  m_PrefabInstance: {fileID: 3015518653119966916}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141908482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94f9ba507e50e6441b7771aa26b7e76e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SettingDirector
 --- !u!4 &721671538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1944118555373882968, guid: 3a7e4ca69b42d8d43a9c7cfee25924b1, type: 3}
@@ -128616,7 +128605,7 @@ PrefabInstance:
     - target: {fileID: 2524916406991886164, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
       propertyPath: setting
       value: 
-      objectReference: {fileID: 706914746}
+      objectReference: {fileID: 0}
     - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -78.92527
@@ -128660,6 +128649,10 @@ PrefabInstance:
     - target: {fileID: 4893553100174955569, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
       propertyPath: m_Name
       value: GameDirector (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893553100174955569, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
