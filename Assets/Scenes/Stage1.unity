@@ -1424,6 +1424,7 @@ GameObject:
   - component: {fileID: 429945892}
   - component: {fileID: 429945893}
   - component: {fileID: 429945894}
+  - component: {fileID: 429945895}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1594,6 +1595,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!114 &429945895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429945888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0011fc8b5cbf5b8469fa554881e18f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestStage
 --- !u!1001 &457729429
 PrefabInstance:
   m_ObjectHideFlags: 0

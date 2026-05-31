@@ -9,6 +9,7 @@ public class SelectStageDirector : MonoBehaviour
     public int selectStage;
 
     private static int selectedStageNum;
+    private bool isLoading = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,8 +40,11 @@ public class SelectStageDirector : MonoBehaviour
             }
         }
         
-        if (Fade.IsFadeOutComplete())
+        if (!isLoading && Fade.IsFadeOutComplete())
         {
+            isLoading = true;
+            Debug.Log("Fade Complete");
+            Debug.Log("Load : Stage" + selectedStageNum);
             SceneManager.LoadScene("Stage" + selectedStageNum);
         }
         
