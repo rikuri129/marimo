@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 36032697}
   - component: {fileID: 36032698}
   - component: {fileID: 36032699}
+  - component: {fileID: 36032700}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -205,7 +206,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36032696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df2f50c0b1537ef4b83bf050936976dc, type: 3}
   m_Name: 
@@ -213,6 +214,19 @@ MonoBehaviour:
   Fade: {fileID: 563985625}
   mainCamera: {fileID: 1476650184}
   selectStage: 3
+--- !u!114 &36032700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36032696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6208fd3c07d927241a1fe4e625ba57f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StageTriggerManager
+  stageNum: 3
 --- !u!1 &155177228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1788,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1916012436}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1003032797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003032798}
+  - component: {fileID: 1003032799}
+  m_Layer: 0
+  m_Name: selectStageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1003032798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003032797}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25848, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1003032799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003032797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54be83ca773ac4296b66eb120df93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectStageManager
+  Fade: {fileID: 563985625}
+  mainCamera: {fileID: 1476650186}
 --- !u!1 &1044271267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,6 +1923,7 @@ GameObject:
   - component: {fileID: 1124738727}
   - component: {fileID: 1124738728}
   - component: {fileID: 1124738729}
+  - component: {fileID: 1124738730}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -1938,7 +1999,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124738726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df2f50c0b1537ef4b83bf050936976dc, type: 3}
   m_Name: 
@@ -1946,6 +2007,19 @@ MonoBehaviour:
   Fade: {fileID: 563985625}
   mainCamera: {fileID: 1476650184}
   selectStage: 1
+--- !u!114 &1124738730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124738726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6208fd3c07d927241a1fe4e625ba57f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StageTriggerManager
+  stageNum: 1
 --- !u!1 &1236957510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,71 +2342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376941187}
   m_CullTransparentMesh: 1
---- !u!1001 &1394583711
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2524916406991886164, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: Fade
-      value: 
-      objectReference: {fileID: 563985625}
-    - target: {fileID: 2524916406991886164, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: setting
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4893553100174955569, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
-      propertyPath: m_Name
-      value: GameDirector
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
 --- !u!1 &1421114989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,6 +2988,7 @@ GameObject:
   - component: {fileID: 1893556534}
   - component: {fileID: 1893556535}
   - component: {fileID: 1893556536}
+  - component: {fileID: 1893556537}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -3054,7 +3064,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893556533}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df2f50c0b1537ef4b83bf050936976dc, type: 3}
   m_Name: 
@@ -3062,6 +3072,19 @@ MonoBehaviour:
   Fade: {fileID: 563985625}
   mainCamera: {fileID: 1476650184}
   selectStage: 2
+--- !u!114 &1893556537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893556533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6208fd3c07d927241a1fe4e625ba57f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StageTriggerManager
+  stageNum: 2
 --- !u!1 &1916012435
 GameObject:
   m_ObjectHideFlags: 0
@@ -3622,5 +3645,5 @@ SceneRoots:
   - {fileID: 1966813688}
   - {fileID: 851108062}
   - {fileID: 1856581903}
-  - {fileID: 1394583711}
   - {fileID: 237921439}
+  - {fileID: 1003032798}

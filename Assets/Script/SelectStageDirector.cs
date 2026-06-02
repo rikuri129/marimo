@@ -8,7 +8,7 @@ public class SelectStageDirector : MonoBehaviour
     public GameObject mainCamera;
     public int selectStage;
 
-    private static int selectedStageNum;
+    private int selectedStageNum;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
