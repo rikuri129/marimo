@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SelectStageDirector : MonoBehaviour
 {
-    [Header("ƒtƒF[ƒh")] public FadeDirector Fade;
+    [Header("ãƒ•ã‚§ãƒ¼ãƒ‰")] public FadeDirector Fade;
 
     public GameObject mainCamera;
     public int selectStage;
@@ -15,8 +15,9 @@ public class SelectStageDirector : MonoBehaviour
     {
         if(Fade == null)
         {
-            print("ƒGƒ‰[‚Å‚·B");
+            print("ã‚¨ãƒ©ãƒ¼ã§ã™ã€‚");
         }
+        Debug.Log(Fade.IsFadeOutComplete());
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class SelectStageDirector : MonoBehaviour
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Collider2D col = Physics2D.OverlapPoint(mousePos);
 
-        //ƒ}ƒEƒX‚Å‘I‘ğ‚³‚ê‚½ƒXƒe[ƒW‚Ö”ò‚Ô‚æ‚¤‚É‚·‚é(‚»‚ÌÛAƒtƒF[ƒhƒAƒEƒg‚ğ‚µ‚È‚ª‚çˆÚ“®‚·‚é)
+        //ãƒã‚¦ã‚¹ã§é¸æŠã•ã‚ŒãŸã‚¹ãƒ†ãƒ¼ã‚¸ã¸é£›ã¶ã‚ˆã†ã«ã™ã‚‹(ãã®éš›ã€ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¢ã‚¦ãƒˆã‚’ã—ãªãŒã‚‰ç§»å‹•ã™ã‚‹)
         if(Input.GetMouseButtonUp(0))
         {
             if (col == this.GetComponent<Collider2D>())
@@ -39,8 +40,11 @@ public class SelectStageDirector : MonoBehaviour
             }
         }
         
-        if (Fade.IsFadeOutComplete())
+        if (!isLoading && Fade.IsFadeOutComplete())
         {
+            isLoading = true;
+            Debug.Log("Fade Complete");
+            Debug.Log(gameObject.name + " Load : Stage" + selectedStageNum);
             SceneManager.LoadScene("Stage" + selectedStageNum);
         }
         
