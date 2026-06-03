@@ -9,7 +9,6 @@ public class SelectStageDirector : MonoBehaviour
     public int selectStage;
 
     private int selectedStageNum;
-    private bool isLoading = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
