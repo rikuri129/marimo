@@ -2803,6 +2803,10 @@ PrefabInstance:
       propertyPath: settingPanel
       value: 
       objectReference: {fileID: 278105556771887666}
+    - target: {fileID: 4291347863678107359, guid: e0d19b088ec8abf4993ef6d6a46d4942, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4525991284736189901, guid: e0d19b088ec8abf4993ef6d6a46d4942, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.17837
