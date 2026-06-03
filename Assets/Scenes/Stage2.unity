@@ -91542,7 +91542,7 @@ PrefabInstance:
     - target: {fileID: 2524916406991886164, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
       propertyPath: setting
       value: 
-      objectReference: {fileID: 904271420}
+      objectReference: {fileID: 0}
     - target: {fileID: 2694651515046396523, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -61.71797
@@ -91586,6 +91586,10 @@ PrefabInstance:
     - target: {fileID: 4893553100174955569, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
       propertyPath: m_Name
       value: GameDirector
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893553100174955569, guid: 5909e79a40837a94eb2d9f99847decc5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
