@@ -175,7 +175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -423.9489, y: -310.01282}
+  m_AnchoredPosition: {x: -424, y: -302}
   m_SizeDelta: {x: 173, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5060437061708966479
@@ -526,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 327.0511, y: -302.01282}
+  m_AnchoredPosition: {x: 327, y: -302}
   m_SizeDelta: {x: 173, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6430019022469703678
@@ -680,10 +680,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpButton
       objectReference: {fileID: 0}
-    - target: {fileID: 3636344137552371429, guid: 45d584cd0ce726d459aa6f67ea7bc860, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3782567324360621062, guid: 45d584cd0ce726d459aa6f67ea7bc860, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -746,11 +742,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3782567324360621062, guid: 45d584cd0ce726d459aa6f67ea7bc860, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -54.948914
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 3782567324360621062, guid: 45d584cd0ce726d459aa6f67ea7bc860, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -318.01282
+      value: -318
       objectReference: {fileID: 0}
     - target: {fileID: 3782567324360621062, guid: 45d584cd0ce726d459aa6f67ea7bc860, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
