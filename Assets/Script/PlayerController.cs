@@ -87,11 +87,16 @@ public class PlayerController : MonoBehaviour
             isEnemyGround = ground.IsEnemyGround();
             isHead = head.IsGround();
 
+            //着地したらジャンプ状態をfalseにする
+            if ((isGround || isEnemyGround) && rb.linearVelocity.y <= 0)
+            {
+                isOtherJump = false;
+                isJump = false;
+            }
+
             float xspeed = GetXSpeed();         //x方向の速度をゲットする
             float yspeed = GetYSpeed(); ; //y方向の速度をゲットする7
 
-            print("isJump : " + isJump);
-            print("isGround : " + isGround);
             //アニメーションを適用
             SetAnimation();
 
@@ -101,6 +106,7 @@ public class PlayerController : MonoBehaviour
             {
                 addVelocity = moveObj.GetVelocity();
             }
+
             rb.linearVelocity = new Vector2(xspeed, yspeed) + addVelocity;      //プレーヤの速度を適用する(動く床の速度も足す. いないときは0のまま)
 
         }
@@ -204,36 +210,35 @@ public class PlayerController : MonoBehaviour
         CapsuleCollider2D collision = null;
         collision = gameObject.GetComponent<CapsuleCollider2D>();
         
-        if (isGround)
+        //チャージ開始時
+        if (isGround && (Input.GetKeyDown(KeyCode.Space) || JumpButton.IsPush()))
         {
-            if ((Input.GetKeyDown(KeyCode.Space) || JumpButton.IsPush()|| Input.GetMouseButtonDown(0)) && isGround)
-            {
                 isCharging = true;
                 chargTime = 0f;
-            }
-
-            if ((Input.GetKey(KeyCode.Space) || JumpButton.IsHold() || Input.GetMouseButton(0)) && isCharging)
+        }
+        //チャージ中
+        if(isCharging)
+        {
+            //ボタンを押している最中の処理
+            if ((Input.GetKey(KeyCode.Space) || JumpButton.IsHold()))
             {
                 chargTime += Time.deltaTime;
-                chargTime = Mathf.Clamp(chargTime, 0f, maxjumptime);
 
-                
-                if(chargTime == maxjumptime)
-                {
-                    rb.AddForce(Vector2.up * maxforce, ForceMode2D.Impulse);
-                    chargTime = 0f;
-                }
-                
-            }
-
-            if ((Input.GetKeyUp(KeyCode.Space) || JumpButton.IsNotPush() || Input.GetMouseButtonUp(0)) && isCharging)
-            {
-                if (!isJump)
+                //チャージ時間が大ジャンプ判定の時間以上になったら自動でジャンプ
+                if (chargTime >= maxjumptime)
                 {
                     GameManager.instance.PlaySE(jumpSE);
+                    rb.AddForce(Vector2.up * maxforce, ForceMode2D.Impulse);
+                    isJump = true;
+                    isCharging = false;
+                    chargTime = 0f;
                 }
 
-                isJump = true;
+            }
+            //ボタンを離したときの処理
+            else if ((Input.GetKeyUp(KeyCode.Space) || JumpButton.IsNotPush()))
+            {
+                GameManager.instance.PlaySE(jumpSE);
 
                 if (chargTime < minijumptime)
                 {
@@ -247,22 +252,15 @@ public class PlayerController : MonoBehaviour
                 {
                     rb.AddForce(Vector2.up * maxforce, ForceMode2D.Impulse);
                 }
-
+                isJump = true;
                 isCharging = false;
             }
-
-            else
-            {/*
-                isJump = false;*/
-            }
         }
 
-        if(isJump && collision.tag == "Ground")
-        {
-            print("重力を加算しています。");
-            float yspeed = -gravity;
-            return yspeed + rb.linearVelocity.y;
-        }
+        Debug.Log(
+    "isJump=" + isJump +
+    " isOtherJump=" + isOtherJump
+);
 
         return rb.linearVelocity.y;
         
