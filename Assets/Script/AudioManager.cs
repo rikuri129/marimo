@@ -68,7 +68,10 @@ public class AudioManager : MonoBehaviour
         {
             return;
         }
-        bgmSource.clip = clip;
-        bgmSource.Play();
+        if (!bgmSource.isPlaying)
+        {
+            bgmSource.clip = clip;
+            bgmSource.Play();
+        }
     }
 }
