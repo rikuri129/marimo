@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     [Header("接地判定")] public GroundCheckDirector ground;          //接地判定スクリプトを参照する変数
     [Header("頭をぶつけた判定")] public GroundCheckDirector head;    //頭をぶつけた判定
     [Header("ダッシュの加減速")] public AnimationCurve DashCurve;    //ダッシュの加減速
-    [Header("重力の加減速")] public AnimationCurve GravityCurve;     //重力の加減速
     [Header("ジャンプするときに鳴らすSE")] public AudioClip jumpSE;
     [Header("敵にあたったときに鳴らすSE")] public AudioClip damageSE;
     [Header("小ジャンプ時間")] public float minijumptime;
@@ -20,8 +19,6 @@ public class PlayerController : MonoBehaviour
     [Header("大ジャンプ")] public float maxforce;
     [Header("ジャンプ時間")] public float JumpTimeLimit;
     [Header("ジャンプ速度")] public float JumpSpeed;
-    [Header("ジャンプの高さ")] public float JumpHeight;
-    [Header("ジャンプの加減速")] public AnimationCurve JumpCurve;
     [Header("Rボタン")] public RLButtonDirector RButton;
     [Header("Lボタン")] public RLButtonDirector LButton;
     [Header("ジャンプボタン")] public RLButtonDirector JumpButton;
@@ -45,18 +42,11 @@ public class PlayerController : MonoBehaviour
     private bool isBlink = false;
     private bool nonDownAnim = false;               //ダウンアニメーションを再生するかどうか
     private bool isClearMotion = false;             //クリアアニメーションを再生するかどうか
-    private bool isSpacePush = false;
     private bool isCharging = false;
-    private bool isRButtonPush = false;
-    private bool isLButtonPush = false;
     private float chargTime = 0.0f;
     private float continueTime = 0.0f;              //コンティニューしてからの経過時間
     private float blinkTime = 0.0f;                 //プレーヤを点滅させるための時間
-    private float JumpPos = 0.0f;                   //ジャンプ中の位置を記録
-    private float OtherJumpHeight = 0.0f;
-    private float JumpTime = 0.0f;                  //ジャンプ時間を測る
     private float DashTime = 0.0f;                  //ダッシュ時間を測る
-    private float FallTime = 0.0f;                  //落下時間を測る
     private float BeforeKey = 0.0f;                 //前回のキー入力を記録
     private string EnemyTag = "Enemy";              //Enemy タグ
     private string deadAreaTag = "DeadArea";        //DeadArea タグ
@@ -374,11 +364,10 @@ public class PlayerController : MonoBehaviour
                             //敵を踏んだら
                             if (isEnemyTag)
                             {
-                                OtherJumpHeight = bd.BoundHeight;    //踏んだものからはねる高さを取得する
-                                JumpPos = transform.position.y;     //踏んづけた位置を記録
-                                bd.PlayerStepOn = true;              //それぞれのフラグを立てる
-                                isOtherJump = true;
-                                JumpTime = 0.0f;                    //ジャンプ時間をリセット
+                                bd.PlayerStepOn = true;
+                                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+                                rb.AddForce(Vector2.up * bd.BoundHeight, ForceMode2D.Impulse);
+                                isJump = true;
                             }
 
                             //落ちる床を踏んだら
