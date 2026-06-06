@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
                 addVelocity = moveObj.GetVelocity();
             }
 
-            rb.linearVelocity = new Vector2(xspeed, yspeed) + addVelocity;      //プレーヤの速度を適用する(動く床の速度も足す. いないときは0のまま)
+            rb.linearVelocity = new Vector2(xspeed + addVelocity.x, yspeed);      //プレーヤの速度を適用する(動く床の速度も足す. いないときは0のまま)
 
         }
         else
@@ -409,7 +409,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// 動く床から離れたとき取得したスクリプト MoveObjectController を離す
+    /// 動く床から離れたとき、取得したスクリプト MoveObjectController を離す
     /// </summary>
     /// <param name="collision"></param>
     private void OnCollisionExit2D(Collision2D collision)
