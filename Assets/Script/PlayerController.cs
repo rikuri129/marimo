@@ -244,6 +244,7 @@ public class PlayerController : MonoBehaviour
                 }
                 isJump = true;
                 isCharging = false;
+                chargTime = 0f;
             }
         }
 
