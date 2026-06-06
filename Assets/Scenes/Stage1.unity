@@ -133762,7 +133762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8718039038384990770, guid: 181dddcbce725a142849fe84aa5deac7, type: 3}
       propertyPath: minijumptime
-      value: 0.08
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

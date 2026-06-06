@@ -162,65 +162,16 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  GravityCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 5
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.7
-      value: 10
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   jumpSE: {fileID: 8300000, guid: 28929ee73ecb56240b8b6dd82ab39129, type: 3}
   damageSE: {fileID: 8300000, guid: d36a0af1a9f363f4ba88211b8ec8ab94, type: 3}
-  minijumptime: 0.1
-  centjumptime: 0.2
-  maxjumptime: 0.25
+  minijumptime: 0.25
+  centjumptime: 0.35
+  maxjumptime: 0.5
   miniforce: 35
-  centforce: 45
+  centforce: 50
   maxforce: 61
   JumpTimeLimit: 5
   JumpSpeed: 5
-  JumpHeight: 12
-  JumpCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.0030593872
-      value: 1.0224304
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.97961426
-      value: -0.012031555
-      inSlope: -0.16007376
-      outSlope: -0.16007376
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.07479306
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   RButton: {fileID: 153550214967297419, guid: 78e7f6631ded5cb45acb0bbfaf7b842c, type: 3}
   LButton: {fileID: 2714127229899013105, guid: ae33f60f39e5fd640b59d418f2f49603, type: 3}
   JumpButton: {fileID: 0}
