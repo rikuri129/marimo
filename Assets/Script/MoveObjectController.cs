@@ -48,7 +48,7 @@ public class MoveObjectController : MonoBehaviour
             }
         }
 
-        myVelocity = (rb.position - oldPostion) / Time.deltaTime;   //速度を求める(速さ = 道のり / 時間)
+        myVelocity = (rb.position - oldPostion) / Time.deltaTime;   //速度を求める
         oldPostion = rb.position;                                   //前の位置を記録
     }
 
@@ -68,7 +68,7 @@ public class MoveObjectController : MonoBehaviour
         //目標ポイントとの誤差がわずかになるまで移動する
         if (Vector2.Distance(transform.position, movePoint[nextPoint].transform.position) > 0.1f)
         {
-            //speed * Time.deltaTime は道のりを求めている(道のり = 速さ × 時間)
+            //speed * Time.deltaTime は道のりを求めている
             Vector2 toVector = Vector2.MoveTowards(transform.position, movePoint[nextPoint].transform.position, speed * Time.deltaTime);
 
             //次のポイントへ移動
