@@ -92273,6 +92273,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1099176265}
     - target: {fileID: 4658792281503442229, guid: f7cab11a48ed33a4486a23914c26b6c3, type: 3}
+      propertyPath: fadeDirector
+      value: 
+      objectReference: {fileID: 1201404938}
+    - target: {fileID: 4658792281503442229, guid: f7cab11a48ed33a4486a23914c26b6c3, type: 3}
       propertyPath: settingManager
       value: 
       objectReference: {fileID: 1488606766}
@@ -94896,6 +94900,34 @@ PrefabInstance:
     - target: {fileID: 785998784691607392, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 974387450597375760, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 974387450597375760, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 974387450597375760, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1365804658}
+    - target: {fileID: 974387450597375760, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 974387450597375760, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: quiteGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 974387450597375760, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 974387450597375760, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1080757372663074703, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
       propertyPath: m_AnchorMax.x

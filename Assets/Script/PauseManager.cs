@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
     [Header("続ける/設定/やめるボタンの親オブジェクト")] public GameObject pauesMene;
     [Header("SettingManager")] public SettingManager settingManager;
+    [Header("FadeDirector")] public FadeDirector fadeDirector;
 
     private bool isPaused = false;
+    private bool pushQuite = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +29,14 @@ public class PauseManager : MonoBehaviour
          
             else
                 closePauseMenu();
+        }
+
+        //ステージの状態をリセット&タイトル画面に戻る
+        if (pushQuite && fadeDirector.IsFadeOutComplete()) 
+        {
+            Time.timeScale = 1;
+            GameManager.instance.RetryGame();
+            SceneManager.LoadScene("TitleScene");
         }
     }
 
@@ -52,5 +63,14 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         pauesMene.SetActive(false); 
         Time.timeScale = 1;
+    }
+
+    public void quiteGame()
+    {
+        if(!pushQuite)
+        {
+            pushQuite = true;
+            fadeDirector.StartFadeOut();
+        }
     }
 }

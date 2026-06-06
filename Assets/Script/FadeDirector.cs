@@ -127,7 +127,7 @@ public class FadeDirector : MonoBehaviour
             FadeInComplete();
         }
 
-        timer += Time.deltaTime;                    //タイマーを加算する
+        timer += Time.unscaledDeltaTime;                    //タイマーを加算する
     }
 
     /// <summary>
@@ -162,7 +162,7 @@ public class FadeDirector : MonoBehaviour
             FadeOuntComplete();
         }
 
-        timer += Time.deltaTime;                    //タイマーを加算する
+        timer += Time.unscaledDeltaTime;                    //タイマーを加算する
     }
 
     /// <summary>
