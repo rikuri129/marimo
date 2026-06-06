@@ -1,5 +1,6 @@
 //using Unity.Android.Gradle.Manifest;
 using UnityEngine;
+using System.Collections;
 
 public class EnemyController2 : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class EnemyController2 : MonoBehaviour
         defaultScal = transform.localScale;
         oldPostion = rb.position;
 
-        //動く床を移動経路の0番目の位置に設定
+        //敵を移動経路の0番目の位置に設定
         if (movePoint != null && movePoint.Length > 0 && rb != null)
         {
             rb.position = movePoint[nowPoint].transform.position;
@@ -81,14 +82,6 @@ public class EnemyController2 : MonoBehaviour
             
         }
 
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == deadAreaTag)
-        {
-            Destroy(gameObject);
-        }
     }
 
     public void normalMove()
@@ -167,13 +160,23 @@ public class EnemyController2 : MonoBehaviour
                 GameManager.instance.score += 10;   //プレーヤのスコアを加算する
             }
 
-            Destroy(gameObject, 3f);            //オブジェクトを破棄する
+            StartCoroutine(disableEnemy()); //3秒後に非アクティブ化
         }
 
         else
         {
             transform.Rotate(0, 0, 5);
         }
+    }
+
+    /// <summary>
+    /// オブジェクトを非アクティブにする
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator disableEnemy()
+    {
+        yield return new WaitForSeconds(3);
+        gameObject.SetActive(false);
     }
 
     public bool DeadJudge()
