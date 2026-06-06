@@ -10,13 +10,13 @@ public class GameManager : MonoBehaviour
     [Header("現在の残機")] public int heartNum;                  //残機
     [Header("デフォルトの残機数")] public int defaultHeartNum;   //デフォルトの残機数
     [Header("ステージの時間制限")] public float defaultTime;     //ステージの制限時間
+    //[Header("オーディオ管理スクリプト")] public AudioManager audioManager;
     [HideInInspector] public bool isGameOver;                    //ゲームオーバーかどうか
     [HideInInspector] public bool isStageClear;                  //ゲームクリアかどうか
     #endregion
 
     private AudioSource audioSource = null;
 
-    //これは Start よりも先に呼ばれる(ここに初期化処理を書くことが多い)
     private void Awake()
     {
         //instan 変数が空箱なら
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
     {
         if(audioSource != null)
         {
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip, AudioManager.instance.getSEVolume());
         }
         else
         {
