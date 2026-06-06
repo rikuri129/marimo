@@ -164,9 +164,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   jumpSE: {fileID: 8300000, guid: 28929ee73ecb56240b8b6dd82ab39129, type: 3}
   damageSE: {fileID: 8300000, guid: d36a0af1a9f363f4ba88211b8ec8ab94, type: 3}
-  minijumptime: 0.25
-  centjumptime: 0.35
-  maxjumptime: 0.5
+  minijumptime: 0.1
+  centjumptime: 0.2
+  maxjumptime: 0.3
   miniforce: 35
   centforce: 50
   maxforce: 61

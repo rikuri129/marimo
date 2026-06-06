@@ -133104,7 +133104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3940863435511289938, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 4031151621409572858, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
       propertyPath: m_Camera
@@ -133157,6 +133157,10 @@ PrefabInstance:
     - target: {fileID: 4557031482604760775, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: StartDirector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858305954403297232, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.1900024
       objectReference: {fileID: 0}
     - target: {fileID: 5272083251665332874, guid: f7a6520e666c83e42a44d5e38e07e5d9, type: 3}
       propertyPath: ptd
